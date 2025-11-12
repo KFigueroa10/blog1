@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuando presión viene de los amigos - Jóvenes sin filtro</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="post-entrada-1.html" class="nav-link">Los Estereotipos y la Presión Social</a>
+        <a href="post-entrada-2.html" class="nav-link">Cuando presión viene de los amigos</a>
+        <a href="post-entrada-3.html" class="nav-link">La imagen no lo es todo</a>
+      </div>
+      <div class="nav-center">
+        <a href="index.html"><img src="logo.svg" alt="Boho Aesthetics" class="logo" /></a>
+      </div>
+      <div class="nav-right">
+        <a href="#" class="icon-link">🔍</a>
+      </div>
+    </div>
+  </nav>
+
+  <main style="max-width: 1000px; margin: 3rem auto; padding: 0 1.25rem;">
+    <section class="hero-section" style="margin-bottom: 2rem;">
+      <div class="hero-content">
+        <div class="hero-image-container">
+          <div class="hero-circle">
+            <img src="img/Imagen3.jpg" alt="Imagen de portada" class="hero-image" />
+          </div>
+          <div class="decorative-elements">
+            <span class="deco-heart">❤️</span>
+            <span class="deco-flower">✿</span>
+            <span class="deco-butterfly">🦋</span>
+          </div>
+        </div>
+        <div class="hero-text">
+          <div class="hero-rainbow">🌈</div>
+          <h1 class="section-title" id="post-title" style="margin-bottom: .5rem;">Cuando presión viene de los amigos</h1>
+          <p style="opacity:.7">Publicado el <span id="post-date"></span></p>
+        </div>
+      </div>
+      <div class="hero-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <article style="background: var(--white); padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,.06); line-height: 1.9; color: var(--navy);">
+      <p>Durante la adolescencia, las amistades adquieren una gran importancia. Los amigos se convierten en una especie de “segunda familia”. Sin embargo, también es común que aparezca la presión de grupo, una influencia que puede ser positiva o negativa.</p>
+      <p>La presión de los amigos ocurre cuando uno se siente forzado a actuar, pensar o decidir algo solo para ser aceptado. A veces no es intencional; pueden surgir frases como “Vamos, no seas aburrido”, “Todos lo hacemos” o “Si no vienes, ya no te invitamos”.</p>
+      <p>Esto puede provocar inseguridad y miedo a quedar fuera. Cambiar el comportamiento solo por encajar afecta la autoestima y la identidad personal.</p>
+      <h3>La importancia de reconocer la presión social</h3>
+      <p>No siempre es evidente. Se disfraza de consejos, retos o modas. Señales de alerta:</p>
+      <ul>
+        <li>Temor a expresar una opinión diferente.</li>
+        <li>Cambiar gustos o forma de vestir solo para agradar.</li>
+        <li>Actuar contra lo que creemos correcto por miedo a críticas.</li>
+        <li>Sentir culpa o incomodidad después de hacer algo que no queríamos.</li>
+      </ul>
+      <p>Decir “no” no significa perder amistades. Los verdaderos amigos respetan límites y valoran nuestras decisiones.</p>
+      <h3>Ejemplos reales</h3>
+      <ul>
+        <li>En la escuela: presionar para burlarse de alguien o participar en algo que está mal.</li>
+        <li>En redes: seguir tendencias o publicar solo por “likes”.</li>
+        <li>En lo personal: cambiar cómo vistes o actúas para no sentirte diferente.</li>
+      </ul>
+      <p style="margin: .5rem 0 1rem; opacity:.85">Video corto sobre cómo detectar y enfrentar la presión de grupo.</p>
+      <div class="video-embed">
+        <iframe src="https://www.youtube-nocookie.com/embed/dMAK-QCpR-k?rel=0"
+                title="Video recomendado sobre presión social" loading="lazy" referrerpolicy="origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>
+      <p><a href="https://youtu.be/dMAK-QCpR-k?si=A49QwIh-B6DkZDSq" target="_blank" rel="noopener">Ver en YouTube</a></p>
+      <h3>Reflexión grupal</h3>
+      <p>La presión de grupo se puede superar con autoestima, comunicación asertiva y límites claros. Elige amistades que sumen y te hagan sentir libre de ser quien eres.</p>
+    </article>
+
+    
+  </main>
+   <footer class="footer">
+
+        <!-- Comentarios del Blog (dentro del footer) -->
+        <section class="comments" aria-labelledby="comments-title" style="margin:2rem auto; max-width: 1000px;">
+          <h3 id="comments-title">Comentarios del Blog</h3>
+          <form id="comment-form" class="comment-form" novalidate>
+            <div class="comment-row">
+              <input id="comment-name" class="comment-input" type="text" placeholder="Tu nombre (opcional)" />
+              <button class="comment-submit" type="submit">Publicar comentario</button>
+            </div>
+            <div style="margin-bottom:.5rem; color:var(--teal);">Calificación:</div>
+            <div class="rating" role="radiogroup" aria-label="Calificación en estrellas">
+              <input type="radio" id="rate5" name="rating" value="5"><label for="rate5">★</label>
+              <input type="radio" id="rate4" name="rating" value="4"><label for="rate4">★</label>
+              <input type="radio" id="rate3" name="rating" value="3"><label for="rate3">★</label>
+              <input type="radio" id="rate2" name="rating" value="2"><label for="rate2">★</label>
+              <input type="radio" id="rate1" name="rating" value="1"><label for="rate1">★</label>
+            </div>
+            <textarea id="comment-text" class="comment-textarea" placeholder="Escribe tu comentario..." required></textarea>
+            <div id="comment-error" class="comment-error"  role="alert"></div>
+          </form>
+          <div id="avg-stars" class="stars" aria-label="Promedio de estrellas" style="margin-top: .5rem;"></div>
+          <ul id="comments-list" class="comments-list" aria-live="polite"></ul>
+        </section>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Boho Aesthetics. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="comments.js"></script>
+  <script>
+    document.getElementById('post-date').textContent = new Date().toLocaleDateString();
+    (function(){
+      const frames = document.querySelectorAll('.video-embed iframe');
+      frames.forEach(f=>{
+        let ok = false;
+        f.addEventListener('load', ()=>{ ok = true; });
+        const src = f.getAttribute('src')||'';
+        const m = src.match(/embed\/([A-Za-z0-9_-]+)/);
+        const vid = m ? m[1] : null;
+        setTimeout(()=>{
+          if(ok || !vid) return;
+          const parent = f.parentElement;
+          const a = document.createElement('a');
+          a.href = `https://youtu.be/${vid}`;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.style.display = 'block';
+          a.style.position = 'relative';
+          a.innerHTML = `<img src="https://img.youtube.com/vi/${vid}/hqdefault.jpg" alt="Ver en YouTube" style="width:100%; height:100%; object-fit:cover;">`+
+                        `<span style=\"position:absolute; left:12px; bottom:12px; background:rgba(0,0,0,.6); color:#fff; padding:.4rem .6rem; border-radius:8px;\">Abrir en YouTube</span>`;
+          parent.replaceChildren(a);
+        }, 2000);
+      });
+    })();
+  </script>
+</body>
+</html>

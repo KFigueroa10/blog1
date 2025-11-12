@@ -1,0 +1,10 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#F5EEE8"/>
+  <ellipse cx="120" cy="180" rx="25" ry="60" fill="#FFFFFF" stroke="#567C8D" stroke-width="2"/>
+  <ellipse cx="120" cy="120" rx="20" ry="10" fill="#FFFFFF" stroke="#567C8D" stroke-width="2"/>
+  <ellipse cx="180" cy="190" rx="20" ry="50" fill="#FFFFFF" stroke="#567C8D" stroke-width="2"/>
+  <ellipse cx="180" cy="140" rx="15" ry="8" fill="#FFFFFF" stroke="#567C8D" stroke-width="2"/>
+  <line x1="50" y1="240" x2="250" y2="240" stroke="#2F4156" stroke-width="1"/>
+  <text x="150" y="260" font-family="Arial" font-size="14" fill="#2F4156" text-anchor="middle">Ceramic Vases</text>
+  <text x="150" y="280" font-family="Arial" font-size="12" fill="#567C8D" text-anchor="middle">$56.00</text>
+</svg>
