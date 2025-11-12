@@ -60,70 +60,43 @@
       <p>Recordemos: la imagen no lo es todo. Lo exterior llama la atención; lo interior deja huella.</p>
       <p style="margin: .5rem 0 1rem; opacity:.85">Un mensaje sobre identidad y autoestima más allá de la apariencia.</p>
       <div class="video-embed">
-        <iframe src="https://www.youtube-nocookie.com/embed/F_qGR7Qgj7I?rel=0"
-                title="Video para reflexionar" loading="lazy" referrerpolicy="origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+        <a class="video-link" href="https://youtu.be/F_qGR7Qgj7I" target="_blank" rel="noopener">
+          <img src="https://img.youtube.com/vi/F_qGR7Qgj7I/hqdefault.jpg" alt="Ver video en YouTube">
+          <span class="play-badge">Ver en YouTube</span>
+        </a>
       </div>
       <p><a href="https://youtu.be/F_qGR7Qgj7I?si=CUBm3sX_CwS5eCX" target="_blank" rel="noopener">Ver en YouTube</a></p>
     </article>
   </main>
  <footer class="footer">
+   <section class="more-posts" style="max-width:1000px; margin:2rem auto; padding:0 1.25rem;">
+     <article class="more-post" style="padding:1.25rem 0; border-bottom:1px solid rgba(0,0,0,.08);">
+       <h3 style="margin:0 0 .25rem 0;"><a href="post-entrada-1.html">Los estereotipos y la presión social en la adolescencia</a></h3>
+       <p style="margin:.1rem 0 .9rem 0; opacity:.65;">- octubre 16, 2025</p>
+       <div style="display:flex; gap:1rem; align-items:flex-start;">
+         <img src="img/Imagen2.jpg" alt="Miniatura" style="width:72px; height:72px; object-fit:cover; border-radius:8px; flex:0 0 auto;">
+         <p style="margin:0; opacity:.9;">Cómo los estereotipos afectan lo que sentimos y hacemos durante la adolescencia.</p>
+       </div>
+       <p style="text-align:right; margin:.6rem 0 0 0;"><a href="post-entrada-1.html">READ MORE »</a></p>
+     </article>
+     <article class="more-post" style="padding:1.25rem 0;">
+       <h3 style="margin:0 0 .25rem 0;"><a href="post-entrada-2.html">Cuando la presión viene de los amigos</a></h3>
+       <p style="margin:.1rem 0 .9rem 0; opacity:.65;">- octubre 17, 2025</p>
+       <div style="display:flex; gap:1rem; align-items:flex-start;">
+         <img src="img/Imagen3.jpg" alt="Miniatura" style="width:72px; height:72px; object-fit:cover; border-radius:8px; flex:0 0 auto;">
+         <p style="margin:0; opacity:.9;">Decir “no” y respetar tus límites también es parte de la amistad.</p>
+       </div>
+       <p style="text-align:right; margin:.6rem 0 0 0;"><a href="post-entrada-2.html">READ MORE »</a></p>
+     </article>
+   </section>
+   <div class="footer-bottom">
+     <p>&copy; 2024 Boho Aesthetics. All rights reserved.</p>
+   </div>
+ </footer>
 
-        <!-- Comentarios del Blog (dentro del footer) -->
-        <section class="comments" aria-labelledby="comments-title" style="margin:2rem auto; max-width: 1000px;">
-          <h3 id="comments-title">Comentarios del Blog</h3>
-          <form id="comment-form" class="comment-form" novalidate>
-            <div class="comment-row">
-              <input id="comment-name" class="comment-input" type="text" placeholder="Tu nombre (opcional)" />
-              <button class="comment-submit" type="submit">Publicar comentario</button>
-            </div>
-            <div style="margin-bottom:.5rem; color:var(--teal);">Calificación:</div>
-            <div class="rating" role="radiogroup" aria-label="Calificación en estrellas">
-              <input type="radio" id="rate5" name="rating" value="5"><label for="rate5">★</label>
-              <input type="radio" id="rate4" name="rating" value="4"><label for="rate4">★</label>
-              <input type="radio" id="rate3" name="rating" value="3"><label for="rate3">★</label>
-              <input type="radio" id="rate2" name="rating" value="2"><label for="rate2">★</label>
-              <input type="radio" id="rate1" name="rating" value="1"><label for="rate1">★</label>
-            </div>
-            <textarea id="comment-text" class="comment-textarea" placeholder="Escribe tu comentario..." required></textarea>
-            <div id="comment-error" class="comment-error"  role="alert"></div>
-          </form>
-          <div id="avg-stars" class="stars" aria-label="Promedio de estrellas" style="margin-top: .5rem;"></div>
-          <ul id="comments-list" class="comments-list" aria-live="polite"></ul>
-        </section>
-
-        <div class="footer-bottom">
-            <p>&copy; 2024 Boho Aesthetics. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="comments.js"></script>
-
-  <script>
-    document.getElementById('post-date').textContent = new Date().toLocaleDateString();
-    (function(){
-      const frames = document.querySelectorAll('.video-embed iframe');
-      frames.forEach(f=>{
-        let ok = false;
-        f.addEventListener('load', ()=>{ ok = true; });
-        const src = f.getAttribute('src')||'';
-        const m = src.match(/embed\/([A-Za-z0-9_-]+)/);
-        const vid = m ? m[1] : null;
-        setTimeout(()=>{
-          if(ok || !vid) return;
-          const parent = f.parentElement;
-          const a = document.createElement('a');
-          a.href = `https://youtu.be/${vid}`;
-          a.target = '_blank';
-          a.rel = 'noopener';
-          a.style.display = 'block';
-          a.style.position = 'relative';
-          a.innerHTML = `<img src="https://img.youtube.com/vi/${vid}/hqdefault.jpg" alt="Ver en YouTube" style="width:100%; height:100%; object-fit:cover;">`+
-                        `<span style=\"position:absolute; left:12px; bottom:12px; background:rgba(0,0,0,.6); color:#fff; padding:.4rem .6rem; border-radius:8px;\">Abrir en YouTube</span>`;
-          parent.replaceChildren(a);
-        }, 2000);
-      });
-    })();
-  </script>
+ <script src="video-modal.js"></script>
+ <script>
+   document.getElementById('post-date').textContent = new Date().toLocaleDateString();
+ </script>
 </body>
 </html>

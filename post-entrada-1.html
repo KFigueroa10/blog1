@@ -78,62 +78,33 @@
 
     
   </main>
-   <footer class="footer">
-
-        <!-- Comentarios del Blog (dentro del footer) -->
-        <section class="comments" aria-labelledby="comments-title" style="margin:2rem auto; max-width: 1000px;">
-          <h3 id="comments-title">Comentarios del Blog</h3>
-          <form id="comment-form" class="comment-form" novalidate>
-            <div class="comment-row">
-              <input id="comment-name" class="comment-input" type="text" placeholder="Tu nombre (opcional)" />
-              <button class="comment-submit" type="submit">Publicar comentario</button>
-            </div>
-            <div style="margin-bottom:.5rem; color:var(--teal);">Calificación:</div>
-            <div class="rating" role="radiogroup" aria-label="Calificación en estrellas">
-              <input type="radio" id="rate5" name="rating" value="5"><label for="rate5">★</label>
-              <input type="radio" id="rate4" name="rating" value="4"><label for="rate4">★</label>
-              <input type="radio" id="rate3" name="rating" value="3"><label for="rate3">★</label>
-              <input type="radio" id="rate2" name="rating" value="2"><label for="rate2">★</label>
-              <input type="radio" id="rate1" name="rating" value="1"><label for="rate1">★</label>
-            </div>
-            <textarea id="comment-text" class="comment-textarea" placeholder="Escribe tu comentario..." required></textarea>
-            <div id="comment-error" class="comment-error"  role="alert"></div>
-          </form>
-          <div id="avg-stars" class="stars" aria-label="Promedio de estrellas" style="margin-top: .5rem;"></div>
-          <ul id="comments-list" class="comments-list" aria-live="polite"></ul>
-        </section>
-
-        <div class="footer-bottom">
-            <p>&copy; 2024 Boho Aesthetics. All rights reserved.</p>
+  <footer class="footer">
+    <section class="more-posts" style="max-width:1000px; margin:2rem auto; padding:0 1.25rem;">
+      <article class="more-post" style="padding:1.25rem 0; border-bottom:1px solid rgba(0,0,0,.08);">
+        <h3 style="margin:0 0 .25rem 0;"><a href="post-entrada-2.html">Cuando la presión viene de los amigos</a></h3>
+        <p style="margin:.1rem 0 .9rem 0; opacity:.65;">- octubre 17, 2025</p>
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <img src="img/Imagen3.jpg" alt="Miniatura" style="width:72px; height:72px; object-fit:cover; border-radius:8px; flex:0 0 auto;">
+          <p style="margin:0; opacity:.9;">Idea: Reflexionar cómo los amigos pueden ejercer presión para que encajemos o hagamos cosas que no queremos.</p>
         </div>
-    </footer>
+        <p style="text-align:right; margin:.6rem 0 0 0;"><a href="post-entrada-2.html">READ MORE »</a></p>
+      </article>
+      <article class="more-post" style="padding:1.25rem 0;">
+        <h3 style="margin:0 0 .25rem 0;"><a href="post-entrada-3.html">La imagen no lo es todo</a></h3>
+        <p style="margin:.1rem 0 .9rem 0; opacity:.65;">- octubre 18, 2025</p>
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <img src="img/Imagen4.jpg" alt="Miniatura" style="width:72px; height:72px; object-fit:cover; border-radius:8px; flex:0 0 auto;">
+          <p style="margin:0; opacity:.9;">Cómo la autoimagen influye en nuestra autoestima y decisiones, más allá de las apariencias.</p>
+        </div>
+        <p style="text-align:right; margin:.6rem 0 0 0;"><a href="post-entrada-3.html">READ MORE »</a></p>
+      </article>
+    </section>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Jóvenes sin filtro. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
-    <!-- Firebase App + Firestore (v10) -->
-    <script type="module">
-      import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
-      import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js';
-      import { getFirestore, collection, addDoc, doc, updateDoc, deleteDoc, writeBatch, getDocs, onSnapshot, query, where, orderBy, serverTimestamp, increment } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js';
-
-      const firebaseConfig = {
-        apiKey: "AIzaSyD2ugeo53YhrV45U2KMT0Ovm0gdtMAAlhg",
-        authDomain: "blog-cc061.firebaseapp.com",
-        projectId: "blog-cc061",
-        storageBucket: "blog-cc061.firebasestorage.app",
-        messagingSenderId: "732049260910",
-        appId: "1:732049260910:web:996ae1b750035672d4017f",
-        measurementId: "G-QCHDT0XYQG"
-      };
-
-      try {
-        const app = initializeApp(firebaseConfig);
-        try { getAnalytics(app); } catch(_) {}
-        const db = getFirestore(app);
-        window.db = db;
-        window.firestore = { collection, addDoc, doc, updateDoc, deleteDoc, writeBatch, getDocs, onSnapshot, query, where, orderBy, serverTimestamp, increment };
-      } catch (e) { console.warn('Firebase no inicializado:', e); }
-    </script>
-    <script src="comments.js"></script>
-    <script src="video-modal.js"></script>
+  <script src="video-modal.js"></script>
   <script>
     document.getElementById('post-date').textContent = new Date().toLocaleDateString();
   </script>
