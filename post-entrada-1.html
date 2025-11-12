@@ -133,31 +133,9 @@
       } catch (e) { console.warn('Firebase no inicializado:', e); }
     </script>
     <script src="comments.js"></script>
+    <script src="video-modal.js"></script>
   <script>
     document.getElementById('post-date').textContent = new Date().toLocaleDateString();
-    (function(){
-      const frames = document.querySelectorAll('.video-embed iframe');
-      frames.forEach(f=>{
-        let ok = false;
-        f.addEventListener('load', ()=>{ ok = true; });
-        const src = f.getAttribute('src')||'';
-        const m = src.match(/embed\/([A-Za-z0-9_-]+)/);
-        const vid = m ? m[1] : null;
-        setTimeout(()=>{
-          if(ok || !vid) return;
-          const parent = f.parentElement;
-          const a = document.createElement('a');
-          a.href = `https://youtu.be/${vid}`;
-          a.target = '_blank';
-          a.rel = 'noopener';
-          a.style.display = 'block';
-          a.style.position = 'relative';
-          a.innerHTML = `<img src="https://img.youtube.com/vi/${vid}/hqdefault.jpg" alt="Ver en YouTube" style="width:100%; height:100%; object-fit:cover;">`+
-                        `<span style="position:absolute; left:12px; bottom:12px; background:rgba(0,0,0,.6); color:#fff; padding:.4rem .6rem; border-radius:8px;">Abrir en YouTube</span>`;
-          parent.replaceChildren(a);
-        }, 2000);
-      });
-    })();
   </script>
 </body>
 </html>
