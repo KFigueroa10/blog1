@@ -190,7 +190,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, var(--beige) 0%, var(--sky-blue) 50%, var(--beige) 100%);
+    background: linear-gradient(135deg, var(--beige) 0%, var(--sky-blue) 45%, var(--teal) 110%);
     padding: 4rem 2rem;
     position: relative;
     overflow: hidden;
@@ -205,7 +205,7 @@ body {
     height: 500px;
     background: var(--sky-blue);
     border-radius: 50%;
-    opacity: 0.3;
+    opacity: 0.45;
     z-index: 0;
 }
 
@@ -218,7 +218,7 @@ body {
     height: 400px;
     background: var(--teal);
     border-radius: 50%;
-    opacity: 0.2;
+    opacity: 0.35;
     z-index: 0;
 }
 
@@ -256,11 +256,11 @@ body {
 
 /* Variante sin círculo: lata/imagen destacada */
 .hero-soda {
-  width: 460px;
+  width: 560px;
   max-width: 100%;
   height: auto;
   filter: drop-shadow(0 24px 60px rgba(0,0,0,.25));
-  transform: rotate(-4deg);
+  transform: none;
 }
 
 .decorative-elements {
@@ -317,7 +317,7 @@ body {
 }
 
 .hero-title--big {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
   color: #ffffff;
   letter-spacing: 1px;
