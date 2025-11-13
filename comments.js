@@ -180,14 +180,16 @@
     USING_FB = !!fb();
     if(USING_FB){
       try{
-        const { collection, onSnapshot, query, where, orderBy } = fb();
-        const q = query(collection(window.db,'comments'), where('postId','==', getPostId()), orderBy('ts','desc'));
+        const { collection, onSnapshot, query, where } = fb();
+        const q = query(collection(window.db,'comments'), where('postId','==', getPostId()));
         onSnapshot(q, (snap)=>{
           const arr = [];
           snap.forEach(docSnap=>{
             const d = docSnap.data();
             arr.push({ id: docSnap.id, name: d.name, text: d.text, rating: d.rating, likes: d.likes||0, ts: d.ts || Date.now() });
           });
+          // Ordenar por timestamp descendente en cliente
+          arr.sort((a,b)=> (b.ts||0) - (a.ts||0));
           renderComments(arr);
         });
       } catch(err){
