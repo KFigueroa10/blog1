@@ -6,11 +6,15 @@
     <div class="video-modal-content">
       <button class="video-modal-close" aria-label="Cerrar">×</button>
       <iframe src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div class="video-modal-error" style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;background:rgba(0,0,0,.6);color:#fff;font-weight:600;">
+        No se pudo cargar el video aquí.
+      </div>
     </div>
   `;
   document.body.appendChild(modal);
 
   const iframe = modal.querySelector('iframe');
+  const errorBox = modal.querySelector('.video-modal-error');
   const closeBtn = modal.querySelector('.video-modal-close');
 
   // Cerrar modal
@@ -35,7 +39,9 @@
     const videoId = match ? (match[1] || match[2]) : null;
     
     if(!videoId){
-      window.open(href, '_blank');
+      iframe.src = '';
+      errorBox.style.display = 'flex';
+      modal.classList.add('active');
       return;
     }
 
@@ -43,14 +49,11 @@
     iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
     modal.classList.add('active');
 
-    // Fallback: si no carga en 3s, abrir en YouTube
+    // Fallback: si no carga en 3s, mostrar overlay de error
     let loaded = false;
     iframe.addEventListener('load', ()=>{ loaded = true; }, {once: true});
     setTimeout(()=>{
-      if(!loaded){
-        closeModal();
-        window.open(href, '_blank');
-      }
+      if(!loaded){ errorBox.style.display = 'flex'; }
     }, 3000);
   });
 

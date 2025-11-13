@@ -799,6 +799,15 @@ body {
     padding: 3rem 2rem 1rem;
 }
 
+/* Más posts en footers de entradas */
+.footer .more-posts { color: var(--white); }
+.footer .more-post h3 { font-size: 1.1rem; }
+.footer .more-post h3 a { color: var(--white); text-decoration: none; }
+.footer .more-post h3 a:hover { text-decoration: underline; }
+.footer .more-post p { color: rgba(255,255,255,.85); }
+.footer .more-post a { color: var(--white); }
+.footer .more-post { border-color: rgba(255,255,255,.18) !important; }
+
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
