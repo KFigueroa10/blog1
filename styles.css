@@ -254,6 +254,15 @@ body {
     object-fit: cover;
 }
 
+/* Variante sin círculo: lata/imagen destacada */
+.hero-soda {
+  width: 460px;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 24px 60px rgba(0,0,0,.25));
+  transform: rotate(-4deg);
+}
+
 .decorative-elements {
     position: absolute;
     width: 100%;
@@ -305,6 +314,18 @@ body {
     text-transform: lowercase;
     line-height: 1.3;
     margin-bottom: 2rem;
+}
+
+.hero-title--big {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: none;
+}
+.hero-title--big .lighter {
+  font-weight: 300;
+  opacity: .95;
 }
 
 .hero-title::first-letter {
@@ -899,24 +920,23 @@ body {
         flex-direction: column;
         text-align: center;
     }
-    
+    .hero-soda { 
+        transform: none; 
+        width: 320px; 
+    }
+    .hero-title--big { 
+        font-size: 3rem; 
+    }
     .hero-circle {
         width: 300px;
         height: 300px;
     }
-    
-    .cursive {
-        font-size: 3rem;
-    }
-    
     .nav-left {
         display: none;
     }
-    
     .products-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-    
     .social-images {
         flex-direction: column;
         align-items: center;
@@ -928,11 +948,12 @@ body {
         width: 250px;
         height: 250px;
     }
-    
+    .hero-title--big { 
+        font-size: 2.2rem; 
+    }
     .hero-title {
         font-size: 1.8rem;
     }
-    
     .cursive {
         font-size: 2.4rem;
     }
